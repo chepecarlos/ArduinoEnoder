@@ -1,7 +1,9 @@
 //Variables Encoder
 
-const byte encoderPin[12] = {
-  42, 43 , 44, 45, 46, 47, 48, 49, 50, 51, 52, 53};
+const byte encoderPin[6] = {
+  42, 44, 46, 48, 50,  52};
+const byte encoderPinD[6] = {
+  43, 45, 46, 47, 48, 51};
 
 int encoderPos[6] ={
   0,0,0,0,0,0};
@@ -21,10 +23,10 @@ void setup(){
 
 void loop(){
 
-  boolean encoderActual = digitalRead(encoderPin[p*2]);
+  boolean encoderActual = digitalRead(encoderPin[p]);
 
   if((encoderLast[p] == HIGH) && ( encoderActual== LOW)){
-    if(digitalRead[p*2+1] == LOW){
+    if(digitalRead(encoderPinD[6]) == LOW){
       encoderPos[p]--;
       Serial.println ("L"+(p+1));
     }
@@ -35,8 +37,10 @@ void loop(){
 
   }
   encoderLast[p] = encoderActual;
-  p++; if (p> 6) p = 0;
+  p++; 
+  if (p>= 6) p = 0;
 }
+
 
 
 
