@@ -19,6 +19,8 @@ void setup(){
     pinMode(encoderPin[i], INPUT);
     digitalWrite(encoderPin[i], INPUT);
   }
+  Serial.begin(9600);
+
 }
 
 void loop(){
@@ -28,11 +30,13 @@ void loop(){
   if((encoderLast[p] == HIGH) && ( encoderActual== LOW)){
     if(digitalRead(encoderPinD[6]) == LOW){
       encoderPos[p]--;
-      Serial.println ("L"+(p+1));
+      Serial.print ("L");
+      Serial.println(p+1);
     }
     else{
       encoderPos[p]++;
-      Serial.println ("R"+(p+1));
+      Serial.println("R");
+      Serial.println(p+1);
     }
 
   }
