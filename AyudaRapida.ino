@@ -114,7 +114,7 @@ void loop() {
     O1 = N1;
     Serial.println ("R1");
   }
-  if (N1 > O1) {
+  else if (N1 > O1) {
     O1 = N1;
     Serial.println ("L1");
   }
@@ -123,7 +123,7 @@ void loop() {
     O2 = N2;
     Serial.println ("R2");
   }
-  if (N2 > O2) {
+  else if (N2 > O2) {
     O2 = N2;
     Serial.println ("L2");
   }
@@ -132,7 +132,7 @@ void loop() {
     O3 = N3;
     Serial.println ("R3");
   }
-  if (N3 > O3) {
+  else if (N3 > O3) {
     O3 = N3;
     Serial.println ("L3");
   }
@@ -141,7 +141,7 @@ void loop() {
     O4 = N4;
     Serial.println ("R4");
   }
-  if (N4 > O4) {
+  else if (N4 > O4) {
     O4 = N4;
     Serial.println ("L4");
   }
@@ -150,7 +150,7 @@ void loop() {
     O5 = N5;
     Serial.println ("R5");
   }
-  if (N5 > O5) {
+  else if (N5 > O5) {
     O5 = N5;
     Serial.println ("L5");
   }
@@ -159,7 +159,7 @@ void loop() {
     O6 = N6;
     Serial.println ("R6");
   }
-  if (N6 > O6) {
+  else if (N6 > O6) {
     O6 = N6;
     Serial.println ("L6");
   }
